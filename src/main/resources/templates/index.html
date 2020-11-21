@@ -15,10 +15,10 @@
 
     </tr>
     <tr th:each="bebida : ${bebidas}">
-        <td th:text="${bebidas.getName()}"></td>
-        <td th:text="${bebidas.getTipoBebida()}"></td>
-        <td th:text="${bebidas.getGraduacion()}"></td>
-        <td th:text="${bebidas.getAcompañantes()}"></td>
+        <td th:text="${bebida.getNombre()}"></td>
+        <td th:text="${bebida.getTipoBebida()}"></td>
+        <td th:text="${bebida.getGraduacion().getPorcentaje()}"></td>
+        <td th:text="${bebida.getAcompanante().getNombre()}"></td>
 
 
 

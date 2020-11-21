@@ -15,11 +15,8 @@ public class Alcohol {
     @Embedded
     private Graduacion graduacion;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "alcohol_acompañante",
-    joinColumns = @JoinColumn(name = "acompañante_id"),
-    inverseJoinColumns = @JoinColumn(name = "alcohol_id"))
-    private Set<Acompañante> acompañantes;
+    @OneToOne(cascade = CascadeType.ALL)
+    private Acompanante acompanante;
 
     private TipoBebida tipoBebida;
 
@@ -34,13 +31,12 @@ public class Alcohol {
 
     }
 
-    public Set<Acompañante> getAcompañantes() {
-
-        return acompañantes;
+    public Acompanante getAcompanante() {
+        return acompanante;
     }
 
-    public void setAcompañantes(Set<Acompañante> acompañantes) {
-        this.acompañantes = acompañantes;
+    public void setAcompanante(Acompanante acompanante) {
+        this.acompanante = acompanante;
     }
 
     public Long getId() {

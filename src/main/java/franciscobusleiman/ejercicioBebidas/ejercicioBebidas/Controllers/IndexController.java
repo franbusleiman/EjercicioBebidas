@@ -20,7 +20,7 @@ public class IndexController {
     }
 
     @RequestMapping({"/index", " ", "/" })
-    public String getBebidas(Model model, AlcoholRepository alcoholRepository){
+    public String getBebidas(Model model){
 
         List<Alcohol> bebidas = alcoholRepository.findAll();
 
