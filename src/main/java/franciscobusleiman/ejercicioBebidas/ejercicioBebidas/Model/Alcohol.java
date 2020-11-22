@@ -18,6 +18,7 @@ public class Alcohol {
     @OneToOne(cascade = CascadeType.ALL)
     private Acompanante acompanante;
 
+@Enumerated(value = EnumType.STRING)
     private TipoBebida tipoBebida;
 
 
