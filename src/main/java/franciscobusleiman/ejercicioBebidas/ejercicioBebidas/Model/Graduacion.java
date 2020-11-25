@@ -1,7 +1,9 @@
 package franciscobusleiman.ejercicioBebidas.ejercicioBebidas.Model;
 
-import javax.persistence.*;
+import lombok.Data;
 
+import javax.persistence.*;
+@Data
 @Embeddable
 public class Graduacion {
 
@@ -14,11 +16,5 @@ public class Graduacion {
     public Graduacion(int porcentaje){
     this.porcentaje = porcentaje;
 }
-    public int getPorcentaje() {
-        return porcentaje;
-    }
 
-    public void setPorcentaje(int porcentaje) {
-        this.porcentaje = porcentaje;
-    }
 }
